@@ -7,11 +7,41 @@
 
    git config --global user.name "ваше имя"
    git config --global user.email "ваша почта"
+   
+   затем нужно еще настроить параметр установок окончания строк,
+   для винды нужно тока две строчки.
+   
+   git config --global core.autocrlf true
+   git config --global core.safecrlf false
+   git config --global core.eol native
 
 3. переходим в папку нашего проекта и пишем
    git init
 
-4. связываем папку с удаленным репозиторием
+4. связываем папку с удаленным репозиторием. Во всех мануалах 
+   имя удаленного репозитория дается origin, но можно назвать
+   как угодно хоть traktor.
    git remote add origin git@github.com:usermuser/gitman.git
+   это через интерфейс "git" у которого заморочки с ключами
+   а есть еще протокол "https"
+   git remote add origin https://github.com/usermuser/gitman.git
+
+   для удаления удаленного репозитория из своих ссылок на на него
+   git remote rm origin (origin это имя репозитория)
+
+5. Добавляем все новые и измененные файлы
+   git add .
+
+6. Помечаем все новые и измененные файлы сообщением (commit). 
+   Вместо message пишем комментарии к коммиту, помни что это
+   коммит в локальный репозиторий
+
+   git commit -m "message"
+
+7. Закачиваем код на удаленный репозиторий из локального. Если будет
+   ругаться на то что permission denied, тогда push не пройдет и 
+   нужно добавлять ключи, и вносить свой комп и свой локальный репози
+   торий в список разрешенных. Об этом в пункте №8
    
+   git push -u origin master   
  
