@@ -1,0 +1,17 @@
+
+
+1. sudo apt-get install git
+
+2. сохранить в ОС свои настройки (это имя и эту почту укажете при 
+   регистрации на github.com )
+
+   git config --global user.name "ваше имя"
+   git config --global user.email "ваша почта"
+
+3. переходим в папку нашего проекта и пишем
+   git init
+
+4. связываем папку с удаленным репозиторием
+   git remote add origin git@github.com:usermuser/gitman.git
+   
+ 
