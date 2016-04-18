@@ -5,3 +5,8 @@ du -hs /home
 #Вывод:
 
 278G    /home/
+###############################################
+
+#symbolic link
+sudo ln -s /home/gor/workspace/black-and-white/blackandwhite_nginx.conf /etc/nginx/sites-enabled/
+sudo ln -s /source-file-path /dest-path
