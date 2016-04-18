@@ -19,3 +19,5 @@ sudo /etc/init.d/nginx restart
 sudo /etc/init.d/nginx start
 
 sudo /etc/init.d/nginx stop
+
+sudo /etc/init.d/nginx configtest -> try this if you changed anything
