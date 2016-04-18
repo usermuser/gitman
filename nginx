@@ -1,1 +1,21 @@
 #some useful nginx commands
+
+#ensite - enable site (conf file will present in sites-avalable directory)
+nginx_ensite 000-default
+
+#dissite (conf file will not present in sites-avalable directory)
+nginx_dissite 000-default
+
+
+
+###################Upper code doesnt work properly, gonna test it lately
+
+
+###########################################################################
+
+
+sudo /etc/init.d/nginx restart
+
+sudo /etc/init.d/nginx start
+
+sudo /etc/init.d/nginx stop
