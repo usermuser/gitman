@@ -1,0 +1,22 @@
+#echo text >> file
+
+TODO:
+add git commands workflow
+add creating app1 script
+add creating app2 script
+add creating app3 script
+
+
+sudo apt-get update
+sudo apt-get upgrade
+sudo apt-get install python-pip
+pip -V (last version is 8.0.2 or higher)
+sudo pip install --upgrade pip or sudo pip install -U pip
+sudo mkdir /home/workspace
+cd /home/workspace
+sudo pip install Django=1.8.10
+django-admin startproject project
+cd project
+sudo apt-get install vim
+
+
