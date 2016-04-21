@@ -1,4 +1,5 @@
 
+    ## 1
 #Узнать сколько места занимает папка
 du -hs /home
 
@@ -7,6 +8,11 @@ du -hs /home
 278G    /home/
 ###############################################
 
+    ## 2
 #symbolic link
 sudo ln -s /home/gor/workspace/black-and-white/blackandwhite_nginx.conf /etc/nginx/sites-enabled/
 sudo ln -s /source-file-path /dest-path
+
+    ## 3
+#change file owner
+sudo chown username:groupname /filepath/filename.cfg
