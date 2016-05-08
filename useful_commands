@@ -16,3 +16,10 @@ sudo ln -s /source-file-path /dest-path
     ## 3
 #change file owner
 sudo chown username:groupname /filepath/filename.cfg
+
+    ## 4
+# mount remote directory to /home/ttt/far_projects directory
+# https://habrahabr.ru/post/52310/
+
+fusermount -u /home/ttt/far_projects
+sshfs gor@62.109.4.36:/home/gor /home/ttt/far_projects/
