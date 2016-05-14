@@ -23,3 +23,12 @@ sudo chown username:groupname /filepath/filename.cfg
 
 fusermount -u /home/ttt/far_projects
 sshfs gor@62.109.4.36:/home/gor /home/ttt/far_projects/
+
+    ## 5
+# Linux Version
+cat /etc/issue    
+
+# Same but with codename
+lsb_release -da
+
+    ##6
