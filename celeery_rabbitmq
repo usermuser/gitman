@@ -9,3 +9,11 @@ Never use kill to stop the RabbitMQ server, but rather use the rabbitmqctl comma
 
 $ sudo rabbitmqctl stop
 
+
+##http://stackoverflow.com/questions/19926750/django-importerror-cannot-import-name-celery-possible-circular-import
+#if you get an error 
+#cannot import name celery
+#do this : 
+#Rename proj/proj/celery.py to proj/proj/celery_tasks.py
+#and then changed the content of __init__.py to match: from .celery_tasks import app as celery_app. 
+#No more multiple instances of files named celery.py to cause import confusion seemed to be a simpler approach.
