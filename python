@@ -1,4 +1,4 @@
 python
 >import os,sys
-sys.path
+>sys.path
 
