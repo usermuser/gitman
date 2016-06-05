@@ -62,4 +62,8 @@
   
   git pull origin
   
+9. Посмотреть историю коммитов.
+
+  git log
+  
   9. Создать .gitignore и добавить туда .pyc
