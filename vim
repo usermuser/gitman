@@ -1,3 +1,4 @@
+#Записки программиста     http://eax.me/vim-commands/
 "All commands should be in vimrc file, which is located at
 "/usr/share/vim/vimrc 
 
