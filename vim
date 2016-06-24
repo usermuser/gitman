@@ -15,3 +15,5 @@ set autowrite
 set hidden
 set mouse=a
 syntax on
+
+:w !sudo tee % - write out the current file using sudo
