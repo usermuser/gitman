@@ -38,3 +38,14 @@ cat /etc/*release
 git clone git://github.com/kennethreitz/requests.git
 to install requests lib for python3 type:
 python setup.py install
+
+
+
+   ###8 idle for linux
+Установка IDLE для Python в Ubuntu заключается в выполнении в командной строке Ubuntu одной из следующих команд (в зависимости от того, какая версия Python у вас):
+
+sudo apt-get install idle3 (для тех, у кого установлен python3)
+
+или
+
+sudo apt-get install idle idle-python2.6 (для старых версий python).
