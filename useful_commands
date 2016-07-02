@@ -35,3 +35,6 @@ lsb_release -da
 cat /etc/*release
 
    ##7
+git clone git://github.com/kennethreitz/requests.git
+to install requests lib for python3 type:
+python setup.py install
