@@ -31,4 +31,7 @@ cat /etc/issue
 # Same but with codename
 lsb_release -da
 
-    ##6
+    ##6 FULL INFO
+cat /etc/*release
+
+   ##7
