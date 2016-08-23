@@ -1,0 +1,5 @@
+#to restart gunicorn type
+sudo reload jobname
+or
+sudo reload apple_name
+#jobname is a file located in /etc/init/gunicorn_apple.conf
