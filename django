@@ -1,0 +1,16 @@
+#settings.py
+#
+#put this code to settings.py and 
+#execute python manage.py collectstatic command
+#and django will show all static/media files includint admin interface
+#dont forget to check which version of django you use
+#and dont forget activate virtualenv before 
+#
+# Static files (CSS, JavaScript, Images)
+# https://docs.djangoproject.com/en/1.6/howto/static-files/
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
