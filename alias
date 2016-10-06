@@ -1,0 +1,3 @@
+alias -p                                    > list of aliases
+unalias ls                                  > unalias ls alias
+echo 'alias ls="ls -l"' >> ~/.bashrc        > store your alias in system (in bashrc file)
