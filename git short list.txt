@@ -24,3 +24,9 @@ git push origin feature
 Не забудьте потом сделать git pull upstream master, чтобы увидеть изменения у себя.
 
 Надеюсь, это мини-руководство поможет вам сделать мир чуточку лучше )))
+
+11. git alias
+git config --global alias.co checkout
+git config --global alias.br branch
+git config --global alias.ci commit
+git config --global alias.st status
