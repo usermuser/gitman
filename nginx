@@ -1,5 +1,8 @@
 #some useful nginx commands
 
+#sudo apt-get update
+#sudo apt-get install nginx
+
 #ensite - enable site (conf file will present in sites-avalable directory)
 nginx_ensite 000-default
 
