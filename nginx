@@ -26,3 +26,26 @@ sudo /etc/init.d/nginx stop
 sudo /etc/init.d/nginx configtest -> try this if you changed anything
 
 sudo /etc/init.d/nginx status
+
+
+### config for blog project ###
+#modified 29 sep 2016
+server {
+    listen 80;
+    server_name nortrom.ru www.nortrom.ru;
+
+    location = /favicon.ico { access_log off; log_not_found off; }
+    location /static/ {
+        root /home/gor/workspace/blog;
+    }
+
+#    location / {
+    location /blog {
+        include proxy_params;
+        proxy_pass http://unix:/home/gor/workspace/blog/blog_guni.sock;
+    }
+
+    location = / {
+        root /home/gor/workspace/black-and-white;
+    }
+}
