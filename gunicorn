@@ -38,3 +38,17 @@ setgid nogroup
 chdir /path/to/app/directory
 
 exec /path/to/virtualenv/bin/gunicorn myapp:app
+
+###
+description "Gunicorn application server handling ***Blog*** project"
+
+start on runlevel [2345]
+stop on runlevel [!2345]
+
+respawn
+setuid gor
+setgid gor
+chdir /home/gor/workspace/blog
+
+exec /home/gor/workspace/django_1.8/bin/gunicorn --workers 3 --bind unix:/home/gor/workspace/blog/blog_guni.sock mysite.wsgi:application
+
