@@ -1,3 +1,4 @@
+sudo apt-get install gunicorn
 #to start new gunicorn process type
 sudo start <process name>
 #for example to start new gunicorn instance with name /etc/init/gunicorn_blog.conf type
