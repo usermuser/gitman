@@ -1,0 +1,5 @@
+#if you changed urls mappings in djangoto apply changes type ()
+
+sudo supervisorctl reload 
+
+#after that waite a while (minute or two)
