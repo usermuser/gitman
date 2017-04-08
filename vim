@@ -20,3 +20,6 @@ set mouse=a
 syntax on
 
 :w !sudo tee % - write out the current file using sudo
+
+"### one more blog about vim ##
+http://dimio.org/fajl-nastrojki-vim-vimrc-dlya-linux-i-windows.html
