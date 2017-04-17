@@ -3,6 +3,8 @@
 "/usr/share/vim/vimrc 
 #or 
 #~/.vimrc
+#добавлю от себя что в документации говорится что нужно менять файл /etc/vim/vimrc,
+#так как другой файл при агрейде потрется
 
 "To enable correct cyrillic symbols
 set fileencoding=utf-8
@@ -23,3 +25,13 @@ syntax on
 
 "### one more blog about vim ##
 http://dimio.org/fajl-nastrojki-vim-vimrc-dlya-linux-i-windows.html
+
+#make session
+:mks
+#or mks ~/mysession.vim
+#restore session
+vim -S
+#or vim -S ~/mysession.vim
+#or :so ~/mysession.vim
+#dont forget to save all opened tabs with command
+:xa
