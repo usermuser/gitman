@@ -1,0 +1,5 @@
+#1. Create mount point
+mkdir /mnt/yandex.disk
+#2. Send mount request
+sudo mount -t davfs https://webdav.yandex.ru /mnt/yandex.disk/
+#3. Type username (username@yandex.ru) and password
