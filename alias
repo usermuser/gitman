@@ -1,3 +1,15 @@
 alias -p                                    > list of aliases
 unalias ls                                  > unalias ls alias
 echo 'alias ls="ls -l"' >> ~/.bashrc        > store your alias in system (in bashrc file)
+echo 'alias ls="ls -l"' >> ~/.bash_aliases  > better solution. Don't forget to send next cmd
+. ~/.bashrc                                 > dot means "source"
+
+'''The dot is equivalent to source. With . ~/.bashrc, you source your bash.
+Executing the file would start a child process, execute the commands in this process, then return.
+All that is done in the child process has no effect on the parent process (the bash from which you executed).
+Instead, sourcing (with the dot) acts exactly as if you wrote the content of the file in the terminal. 
+This is what you want. .bashrc is sourced everytime you start a bash.
+If you make changes, they won't apply until you start a new bash or source manually.
+'''
+
+
