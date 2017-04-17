@@ -33,5 +33,6 @@ http://dimio.org/fajl-nastrojki-vim-vimrc-dlya-linux-i-windows.html
 vim -S
 #or vim -S ~/mysession.vim
 #or :so ~/mysession.vim
+#or :source ~/mysession.vim
 #dont forget to save all opened tabs with command
 :xa
