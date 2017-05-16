@@ -36,3 +36,10 @@ vim -S
 #or :source ~/mysession.vim
 #dont forget to save all opened tabs with command
 :xa
+
+#to suspend or hide current vim screen use:
+CTRL+z 
+#or 
+suspend
+#to resume type
+fg
