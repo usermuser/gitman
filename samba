@@ -37,3 +37,68 @@ DEBIAN
 
 # /etc/init.d/samba restart
 Завершите сеанс и войдите в него вновь. Теперь у вас должна появиться возможность настраивать общий доступ samba, используя графический интерфейс. Например, в Dolphin вы можете нажать правую кнопку мыши на любом каталоге и предоставить для него общий доступ в сети.
+
+Неполадки
+
+* NT_STATUS_UNSUCCESSFUL
+
+Находим следующую строку в smb.conf
+
+
+ ; name resolve order = lmhosts host wins bcast
+раскомментируем и изменяем на
+
+
+ name resolve order = lmhosts wins bcast host
+в секции [global]
+
+Добавлем в эту же секцию
+
+
+ local master = Yes
+ browseable = yes
+Если хотим, чтобы мы были видны в локальной сети
+
+И перезапустите Samba :
+
+
+# /etc/init.d/samba restart
+Если у вас возникли проблемы при доступе к защищенному паролем общему ресурсу на Windows попробуйте добавить
+
+
+ [global]
+ # THE LANMAN FIX
+ client lanman auth = yes
+ client ntlmv2 auth = no
+ 
+Заключение
+Тестируем настройки
+
+
+testparm -s
+
+# Примерный рабочий smb.conf
+
+workgroup = WORKGROUP
+server string = Samba Server
+
+[global]
+        server string = Samba Server
+        usershare path = /var/lib/samba/usershare
+        usershare max shares = 100
+        usershare allow guests = yes
+        usershare owner only = False
+        read only = No
+        guest only = Yes
+        guest ok = Yes
+
+[printers]
+        comment = All Printers
+        path = /var/spool/samba
+        read only = Yes
+        guest ok = Yes
+        printable = Yes
+        browseable = Yes
+
+''read only = No'' возможно правильнее всего вынести из [global] в отдельную шару, в данном случае [music]. 
+Но в этом случае, шары созданные через файловый мененджер и не прописанные непосредственно в smb.conf станут доступны только для чтения
