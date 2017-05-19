@@ -1,0 +1,39 @@
+https://wiki.debian.org/Samba%20Quick%20Setup%28Rus%29
+DEBIAN
+# apt-get install samba
+Настройка
+Добавляем пользователя в базу самбы:
+
+# smbpasswd -a имя_пользователя
+Активируем его:
+
+# smbpasswd -e имя_пользователя
+В большинстве случаев, при домашнем использовании, все должно работать и со стандартным smb.conf.
+
+Решение неполадок
+Если при попытке создать общий ресурс через Nautilus или Konqueror Вам сообщается об ошибке :
+
+* ‘net usershare’ returned error 255: net usershare: usershares are currently disabled
+
+в таком случае проделайте следующее : откройте для редактирования файл /etc/samba/smb.conf и отредактируйте секцию [global] следующим образом :
+
+[global]
+  .....
+  usershare path = /var/lib/samba/usershare
+  usershare max shares = 100
+  usershare allow guests = yes
+  usershare owner only = False
+  read only = No
+  guest only = Yes
+  guest ok = Yes
+  .....
+Сохраните файл и закройте текстовый редактор. Далее создайте каталог 'usershare' где Samba будет хранить списки общих папок, разрешив чтение и запись
+
+# mkdir /var/lib/samba/usershares
+# chown root:sambashare /var/lib/samba/usershares
+# chmod 1770 /var/lib/samba/usershares
+# usermod -a -G sambashare <имя пользователя>
+И перезапустите Samba :
+
+# /etc/init.d/samba restart
+Завершите сеанс и войдите в него вновь. Теперь у вас должна появиться возможность настраивать общий доступ samba, используя графический интерфейс. Например, в Dolphin вы можете нажать правую кнопку мыши на любом каталоге и предоставить для него общий доступ в сети.
