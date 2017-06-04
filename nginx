@@ -27,6 +27,14 @@ sudo /etc/init.d/nginx configtest -> try this if you changed anything
 
 sudo /etc/init.d/nginx status
 
+################################################################################3
+
+В случае если что-то работает не как ожидалось,
+можно попытаться выяснить причину с помощью файлов access.log и error.log из каталога
+/usr/local/nginx/logs или
+/var/log/nginx.
+
+######################################################################3
 
 ### config for blog project ###
 #modified 29 sep 2016
