@@ -49,3 +49,13 @@ sudo apt-get install idle3 (для тех, у кого установлен pyth
 или
 
 sudo apt-get install idle idle-python2.6 (для старых версий python).
+
+   ##8
+If you got this error
+perl: warning: Setting locale failed.
+perl: warning: Please check that your locale settings:
+	LANGUAGE = (unset),
+	LC_ALL = (unset),
+	LANG = "ru_RU.UTF-8"
+
+sudo locale-gen en_US.UTF-8
