@@ -39,9 +39,15 @@ git config --global alias.st status
 12. Чтобы удалить ветку в локальном репозитории
 
 13. BRANCHES AFTER CLONE
-By default, git clone creates only one branch: the currently checked out one, generally master. However, it does create remote tracking branches for all other branches in the remote. Think of these as local copies of the remote's branches, which can be updated by fetching. They're not real local branches, as they're intended only as pointers to where the remote's branches are, not for you to work on.
+By default, git clone creates only one branch: the currently checked out one, generally master. 
+However, it does create remote tracking branches for all other branches in the remote. 
+Think of these as local copies of the remote's branches, which can be updated by fetching. 
+They're not real local branches, as they're intended only as pointers to where the remote's branches are,
+not for you to work on.
 
-If you run git branch -a you'll see all branches, local and remote. If you want to see just the remote ones, use git branch -r. If you prefer a visual history display, try gitk --all (or gitk --remotes).
+If you run git branch -a you'll see all branches, local and remote.
+If you want to see just the remote ones, 
+use git branch -r. If you prefer a visual history display, try gitk --all (or gitk --remotes).
 
 To create a local branch to work on, use
 
@@ -57,5 +63,6 @@ You can directly do:
 
 git checkout <original-remote-branch-name>
 
-This automatically creates a local branch which tracks the remote branch with the same name. Do this always after cloning, if you want to work on a particular branch other than master.
+This automatically creates a local branch which tracks the remote branch with the same name. 
+Do this always after cloning, if you want to work on a particular branch other than master.
 
