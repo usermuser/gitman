@@ -135,6 +135,13 @@ you could commit them to a branch there if you want a branch there.)
 
 $ git stash branch testchanges
 
+17.  Забыть изменения
+Если с момента последнего коммита вы поменяли много файлов,
+и команда git status подсвечивает файлы красным, но вы хотите вернуть все назад, то:
+git checkout .
+
+в конце точка, обратите внимание
+
 
 
 
