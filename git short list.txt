@@ -61,7 +61,11 @@ That'll create a new local branch using the remote's branch as the starting poin
 
 git branch -d <branch_name>
 Чтобы удалить ветку в удаленном репозитории
-git push origin --delete <branch_name>
+git push origin --delete <branch_name>    #or
+git branch -d the_local_branch            #or
+git push origin :the_remote_branch
+https://makandracards.com/makandra/621-git-delete-a-branch-local-or-remote
+
 
 You can directly do:
 
