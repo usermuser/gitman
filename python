@@ -25,5 +25,14 @@ in browser go to http://127.0.0.1:8000/               #if you see "It worked!"
 
 ------ next steps for extra django-registration-redux package installation and configuring -----
 
+http://django-registration-redux.readthedocs.io/en/latest/quickstart.html   #redux documentation
+pip install django-registration-redux                                       #install command
+pip list                                                                    #check all installed packages
+
+###check INSTALLED_APPS section in settings.py file.
+###add two lines if they not exist:
+django.contrib.auth
+django.contrib.sites
+
 
 
