@@ -19,3 +19,11 @@ python -c 'import django;print(django.get_version())  #check Django installation
 python -m django --version                            #same 
 django-admin startproject projName                    #create project
 tree                                                  #check that we have all necessary files and folders
+python manage.py runserver                            #start development server to check if everthinh is ok
+in browser go to http://127.0.0.1:8000/               #if you see "It worked!"
+
+
+------ next steps for extra django-registration-redux package installation and configuring -----
+
+
+
