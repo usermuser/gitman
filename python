@@ -2,3 +2,5 @@ python
 >import os,sys
 >sys.path
 
+#To create venv with python3 as default python, add path to command
+virtualenv --python=/usr/bin/python3 ENV_NAME
