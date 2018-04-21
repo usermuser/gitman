@@ -10,8 +10,9 @@ virtualenv --python=/usr/bin/python3 ENV_NAME
 ----- sequence of commands i used to install all necessary packages ------
 
 
-pip -V                                              #check pip version. On my PC it was 10.0.1
-virtualenv --version                                #check virtualenv version. My version is 15.1.0
-virtualenv --python=/usr/bin/python3 envDjango      #create new venv with python3 as default
-source envDjango2/bin/activate                      #activate our venv
-pip install Django==1.11.12                         #install latest LTS version of Django
+pip -V                                                #check pip version. On my PC it was 10.0.1
+virtualenv --version                                  #check virtualenv version. My version is 15.1.0
+virtualenv --python=/usr/bin/python3 envDjango        #create new venv with python3 as default
+source envDjango2/bin/activate                        #activate our venv
+pip install Django==1.11.12                           #install latest LTS version of Django
+python -c 'import django;print(django.get_version())  #check Django installation
