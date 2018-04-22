@@ -50,10 +50,32 @@ python manage.py migrate
 #registration templates folder located here:
 /home/user/work/envs/envDjango2/lib/python3.5/site-packages/registration/templates/
 
+#Find Templates section in settings file, add path to project templates folder:
+
+TEMPLATES = [
+    {
+        'BACKEND': 'django.template.backends.django.DjangoTemplates',
+        'DIRS': [
+            '/home/user/work/reduxProj/templates/',
+            # '',
+        ],
+        'APP_DIRS': True,
+        'OPTIONS': {
+            'context_processors': [
+                'django.template.context_processors.debug',
+                'django.template.context_processors.request',
+                'django.contrib.auth.context_processors.auth',
+                'django.contrib.messages.context_processors.messages',
+            ],
+        },
+    },
+]
+
 #now we can test our project settings. To do this, open this page:
 http://127.0.0.1:8000/accounts/register/
 
-#if you get an error 'template does not exist', you have to add project templates folder to settings file
+#if you get an error 'template does not exist'
+#it means that path to templates is wrong
 
 
 
