@@ -5,10 +5,7 @@ python
 #To create venv with python3 as default python, add path to command
 virtualenv --python=/usr/bin/python3 ENV_NAME
 
-
-
 ----- sequence of commands i used to install all necessary packages ------
-
 
 pip -V                                                #check pip version. On my PC it was 10.0.1
 virtualenv --version                                  #check virtualenv version. My version is 15.1.0
@@ -21,7 +18,6 @@ django-admin startproject projName                    #create project
 tree                                                  #check that we have all necessary files and folders
 python manage.py runserver                            #start development server to check if everthinh is ok
 in browser go to http://127.0.0.1:8000/               #if you see "It worked!"
-
 
 ------ next steps for extra django-registration-redux package installation and configuring -----
 
@@ -45,6 +41,9 @@ REGISTRATION_AUTO_LOGIN = True      # Automatically log the user in.
 
 ###Once you’ve done this, run python manage.py migrate to install the model used by the default setup
 python manage.py migrate
+
+#Path to django-registration-redux templates
+/home/user/work/envs/envDjango2/lib/python3.5/site-packages/registration/templates/registration/registration_base.html
 
 
 
