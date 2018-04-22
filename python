@@ -39,6 +39,17 @@ INSTALLED_APPS = (
 ACCOUNT_ACTIVATION_DAYS = 7         # One-week activation window; you may, of course, use a different value.
 REGISTRATION_AUTO_LOGIN = True      # Automatically log the user in.
 
+####Open urls.py file in your project folder and make it look like this
+#in short: add accounts line, and add include to first line
+
+        from django.conf.urls import url, include
+        from django.contrib import admin
+
+        urlpatterns = [
+            url(r'^admin/', admin.site.urls),
+            url(r'^accounts/', include('registration.backends.default.urls')), #add this line
+        ]
+
 ###Once you’ve done this, run python manage.py migrate to install the model used by the default setup
 python manage.py migrate
 
