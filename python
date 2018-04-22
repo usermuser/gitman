@@ -45,6 +45,17 @@ python manage.py migrate
 #Path to django-registration-redux templates
 /home/user/work/envs/envDjango2/lib/python3.5/site-packages/registration/templates/registration/registration_base.html
 
+#Create templates folder in your project folder (later we will add path to this folder to settings file)
+#copy registration templates folder into templates folder you just created
+#registration templates folder located here:
+/home/user/work/envs/envDjango2/lib/python3.5/site-packages/registration/templates/
+
+#now we can test our project settings. To do this, open this page:
+http://127.0.0.1:8000/accounts/register/
+
+#if you get an error 'template does not exist', you have to add project templates folder to settings file
+
+
 
 
 
