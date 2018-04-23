@@ -38,6 +38,7 @@ INSTALLED_APPS = (
 #This settings also required
 ACCOUNT_ACTIVATION_DAYS = 7         # One-week activation window; you may, of course, use a different value.
 REGISTRATION_AUTO_LOGIN = True      # Automatically log the user in.
+SITE_ID = 1                         # Redux app need this to create account activation urls
 
 ####Open urls.py file in your project folder and make it look like this
 #in short: add accounts line, and add include to first line
@@ -87,6 +88,8 @@ http://127.0.0.1:8000/accounts/register/
 
 #if you get an error 'template does not exist'
 #it means that path to templates is wrong
+
+
 
 
 
