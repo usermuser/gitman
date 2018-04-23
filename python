@@ -125,12 +125,21 @@ http://127.0.0.1:8000/accounts/activate/ACTIVATION_KEY
 
 #next: try to open page 'http://127.0.0.1:8000/accounts/login'
 #you will see 'page not found. error 404' page, it's ok
-#you just need to logout before. To do this, open page 'http://127.0.0.1:8000/accounts/logout'
-#and go to login page again :)
-#for me, this is basic steps to check that redux app is working, but
-#if you want, you can perform other additional cheking steps, which you can find in next video
-#http://127.0.0.1:8000/accounts/log 
-#start watching from minute 14
+
+#next step is to create redirect to 'whatever' page when we succesfully logged in
+#go to settings file and add this line
+LOGIN_REDIRECT_URL = '/admin/'
+
+#this line will redirect us to admin page when we succesfully logged in
+#log out with 'accounts/logout' url and try to log in again 
+#you will be redirected to admin page with next message
+
+        # You are authenticated as user, 
+        # but are not authorized to access this page. 
+        # Would you like to login to a different account? 
+        
+#
+
 
 
 
