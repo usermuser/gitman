@@ -123,6 +123,13 @@ http://127.0.0.1:8000/accounts/activate/ACTIVATION_KEY
 
 #after you will see message 'Your account is now activated.'
 
+#next: try to open page 'http://127.0.0.1:8000/accounts/login'
+#you will see 'page not found. error 404' page, it's ok
+#you just need to logout before. To do this, open page 'http://127.0.0.1:8000/accounts/logout'
+#and go to login page again :)
+
+
+
 
 
 
