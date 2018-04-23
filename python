@@ -127,6 +127,13 @@ http://127.0.0.1:8000/accounts/activate/ACTIVATION_KEY
 #you will see 'page not found. error 404' page, it's ok
 #you just need to logout before. To do this, open page 'http://127.0.0.1:8000/accounts/logout'
 #and go to login page again :)
+#for me, this is basic steps to check that redux app is working, but
+#if you want, you can perform other additional cheking steps, which you can find in next video
+#http://127.0.0.1:8000/accounts/log 
+#start watching from minute 14
+
+
+
 
 
 
