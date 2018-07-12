@@ -1,6 +1,12 @@
 # to delete compiled pyc files try this:
 find . -name '*.pyc' -delete
 
+#to avoid creatind .pyc files put this commands in manage.py file
+
+import sys
+
+sys.dont_write_bytecode = True
+
 
 #### https://git-scm.com/docs/gitignore
 
